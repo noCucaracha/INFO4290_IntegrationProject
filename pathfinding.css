@@ -1,0 +1,108 @@
+.node {
+    width: 25px;
+    height: 25px;
+    outline: 1.5px solid rgb(66, 134, 186);
+    display:-ms-inline-grid;
+    display:legacy;
+    
+    
+  }
+  
+  .Finish {
+    background-color: black;
+  }
+  
+  .Start {
+    background-color: white;
+  }
+  
+
+  body{
+    background-color: aquamarine;
+    margin:0;
+    max-zoom:1.0;
+    text-align: center;
+    user-zoom: no;
+    scale: 1.0;
+    height:100%;
+    overflow: hidden;
+    align-items:center;
+}
+   
+div{
+    margin:0 0 0;
+    padding: 0%;
+    
+    
+}
+
+.mygrid {
+    margin: 50px 0 0;
+    height: 100%;
+    width: 100%;
+  }
+
+  #container{ 
+    height:90%;
+    width:98%;
+    
+    margin-left: 2% ;
+    
+  
+  }
+
+
+  .navBar{
+    width: 100%;
+    
+    padding-bottom: 5%;
+   
+
+  }
+
+
+.navOption{ margin: 0%;
+  font-size: 22px;
+  padding-top: 1%;
+  padding-bottom: 1%;
+
+  overflow:visible;
+  color:aliceblue;
+  width:20%;
+  float:left;
+  background-color: black;
+  display:block;
+}
+
+#dropdown{
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+
+#algorithm{
+  display:none;
+  position:absolute;
+  width:100%;
+  
+  min-width: 100px;
+  background-color: aliceblue;
+  color:black;
+  z-index: auto;
+  opacity: 0.75;
+  margin-top:5%;
+  
+  text-align: center;
+  
+}
+
+#dropdown:hover #algorithm{
+  display:block;
+  cursor: pointer;
+}
+
+.dropdownBorder{
+  padding:2%;
+  border: 2px solid black;
+}
