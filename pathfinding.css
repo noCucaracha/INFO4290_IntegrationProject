@@ -1,19 +1,27 @@
 .node {
-    width: 25px;
-    height: 25px;
+   
+    width: 20px;
+    height:20px;
     outline: 1.5px solid rgb(66, 134, 186);
     display:-ms-inline-grid;
     display:legacy;
     
+  }
+
+  
+  .nodeFinish {
+    background: linear-gradient(135deg, red,pink,white,pink,red);
+    text-align: center;
+    font-size: smaller;
     
   }
+
   
-  .Finish {
-    background-color: black;
-  }
-  
-  .Start {
-    background-color: white;
+  .nodeStart {
+    background: linear-gradient(45deg,green,lightgreen,white,lightgreen,green);
+    text-align: center;
+    font-size: smaller;
+    
   }
   
 
@@ -46,7 +54,7 @@ div{
     height:90%;
     width:98%;
     
-    margin-left: 2% ;
+    margin-left: 1.5% ;
     
   
   }
@@ -54,24 +62,45 @@ div{
 
   .navBar{
     width: 100%;
-    
+    cursor: pointer;
     padding-bottom: 5%;
-   
-
+    
   }
 
 
 .navOption{ margin: 0%;
-  font-size: 22px;
+  font-size: 20px;
   padding-top: 1%;
   padding-bottom: 1%;
-
+  text-size-adjust:auto;
   overflow:visible;
   color:aliceblue;
   width:20%;
   float:left;
   background-color: black;
   display:block;
+}
+
+
+@media screen and (min-width:720px) and (max-width: 980px){
+  .navOption{
+    font-size:16px;
+  }
+}
+@media screen and (min-width:530px) and (max-width: 720px){
+  .navOption{
+    font-size:12px;
+  }
+}
+@media screen and (max-width:530px){
+  .navOption{
+    font-size:8px;
+  }
+}
+
+
+.navOption:hover{
+  background-color: rgb(70, 53, 53);
 }
 
 #dropdown{
@@ -105,4 +134,15 @@ div{
 .dropdownBorder{
   padding:2%;
   border: 2px solid black;
+}
+.dropdownBorder:hover{
+  background-color: rgb(110, 105, 105);
+
+}
+
+#title{
+  font-size:x-large; 
+  font-weight: bolder; 
+  background-color:white; 
+  padding: 0.5%;
 }
