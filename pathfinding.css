@@ -7,13 +7,22 @@
     display:legacy;
     
   }
+  .node:hover{
+    cursor: default;
+  }
 
   
   .nodeFinish {
     background: linear-gradient(135deg, red,pink,white,pink,red);
     text-align: center;
     font-size: smaller;
-    
+    cursor: pointer;
+    -webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+-o-user-select: none;
+user-select: none;
   }
 
   
@@ -21,8 +30,16 @@
     background: linear-gradient(45deg,green,lightgreen,white,lightgreen,green);
     text-align: center;
     font-size: smaller;
+    cursor: pointer;
     
+    -webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+-o-user-select: none;
+user-select: none;
   }
+ 
   
 
   body{
