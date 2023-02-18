@@ -81,24 +81,6 @@ div{
   display:block;
 }
 
-
-@media screen and (min-width:720px) and (max-width: 980px){
-  .navOption{
-    font-size:16px;
-  }
-}
-@media screen and (min-width:530px) and (max-width: 720px){
-  .navOption{
-    font-size:12px;
-  }
-}
-@media screen and (max-width:530px){
-  .navOption{
-    font-size:8px;
-  }
-}
-
-
 .navOption:hover{
   background-color: rgb(70, 53, 53);
 }
@@ -145,4 +127,36 @@ div{
   font-weight: bolder; 
   background-color:white; 
   padding: 0.5%;
+}
+
+
+@media screen and (min-width:720px) and (max-width: 980px){
+  .navOption{
+    font-size:16px;
+  }
+}
+@media screen and (min-width:530px) and (max-width: 720px){
+  .navOption{
+    font-size:12px;
+  }
+}
+@media screen and (min-width:360px) and (max-width:530px){
+  .navOption{
+    font-size:10px;
+    height:20px;
+    padding-top:6px;
+    padding-bottom: 7px;
+  }
+  #title{
+    font-size:20px;
+  }
+}
+@media only screen and (max-width:360px){
+  .navOption{
+    font-size:8px;
+    height:22px;
+  }
+  #title{
+    font-size:14px;
+  }
 }
