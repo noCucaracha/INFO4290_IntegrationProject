@@ -1,3 +1,3 @@
 # INFO4290_IntegrationProject
 
-nocucaracha.github.io
+http://nocucaracha.github.io
