@@ -1,49 +1,117 @@
+
 .node {
    
     width: 20px;
     height:20px;
-    outline: 1.5px solid rgb(66, 134, 186);
+    outline: 1px solid;
     display:-ms-inline-grid;
     display:legacy;
-    
+    animation-name: myNode;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+   
+  }
+
+  @keyframes myNode {
+    0%{outline-color:rgb(72, 137, 202)}
+    25%{outline-color:rgb(79, 116, 202)}
+    50%{outline-color: rgb(43, 114, 135);}
+    75%{outline-color: rgb(96, 81, 210);}
+    100%{outline-color: rgb(72, 137, 202)}
   }
   .node:hover{
     cursor: default;
   }
 
-  
+  .Obstacle{
+   background-color:rgb(0, 200, 255);
+   
+    border-radius:3px;
+    height: 20px;
+    width: 20px;
+    outline: 1.5px solid;
+    display:-ms-inline-grid;
+    display:legacy;
+    animation-name:myObstacle;
+    animation-duration: 1s;
+    
+  }
+
+  .nodePath{
+    width:20px;
+    height: 20px;
+    background-size:94%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url('./icons/shortestPath.png');
+    border-radius:40%;
+    background-color: rgb(255, 255, 255);
+    animation-name: myPath;
+    animation-duration: 1.5s;
+  }
+
+  .nodeVisited{
+    background-color: rgb(151, 8, 118);
+    outline: 2px solid rgb(0, 0, 0);
+    border-radius: 10%;
+    width: 20px;
+    height: 20px;
+    animation-name: myVisited;
+    animation-duration: 1.5s;
+    background-image: transparent;
+    background-size:80%;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
   .nodeFinish {
-    background: linear-gradient(135deg, red,pink,white,pink,red);
+    background-image: url('./icons/end.png');
+    background-size:90%;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 40%;
     text-align: center;
     font-size: smaller;
-    cursor: pointer;
     -webkit-user-select: none;
 -khtml-user-select: none;
 -moz-user-select: none;
 -ms-user-select: none;
 -o-user-select: none;
 user-select: none;
+animation-name:myFinish;
+animation-duration: 5s;
+animation-iteration-count: infinite;
+  cursor:grab;
   }
 
   
   .nodeStart {
-    background: linear-gradient(45deg,green,lightgreen,white,lightgreen,green);
+    background: rgb(67, 255, 67);
     text-align: center;
     font-size: smaller;
-    cursor: pointer;
-    
+    background-image:url('./icons/start.png');
+    background-position: center;
+    background-size: 85%;
+    background-repeat: no-repeat;
     -webkit-user-select: none;
 -khtml-user-select: none;
 -moz-user-select: none;
 -ms-user-select: none;
 -o-user-select: none;
 user-select: none;
+border-radius: 15%;
+    animation-name:myStart;
+    animation-duration: 0.5s;
+    cursor:grab;
   }
  
   
 
   body{
-    background-color: aquamarine;
+    background-image: url('galaxy.jpg');
+    background-size:120%;
+    background-repeat: no-repeat;
+    background-position-y: center;
     margin:0;
     max-zoom:1.0;
     text-align: center;
@@ -53,7 +121,7 @@ user-select: none;
     overflow: hidden;
     align-items:center;
 }
-   
+
 div{
     margin:0 0 0;
     padding: 0%;
@@ -93,6 +161,7 @@ div{
   overflow:visible;
   color:aliceblue;
   width:20%;
+  height:4%;
   float:left;
   background-color: black;
   display:block;
@@ -104,10 +173,18 @@ div{
 
 #dropdown{
     position: relative;
-    display: inline-block;
+    display: block;
     cursor: pointer;
 }
 
+#vsStart{
+ background-image: url("./icons/naviStart.png");
+ background-size: 30%;
+ background-position: center;
+background-repeat: no-repeat;
+ 
+
+}
 
 #algorithm{
   display:none;
@@ -135,7 +212,7 @@ div{
   border: 2px solid black;
 }
 .dropdownBorder:hover{
-  background-color: rgb(110, 105, 105);
+  background-color: rgb(0, 255, 247);
 
 }
 
@@ -147,14 +224,26 @@ div{
 }
 
 
+
+
 @media screen and (min-width:720px) and (max-width: 980px){
   .navOption{
     font-size:16px;
+  }
+  body{
+    background-size:240%;
+    background-repeat: no-repeat;
+    background-position-y: center;
   }
 }
 @media screen and (min-width:530px) and (max-width: 720px){
   .navOption{
     font-size:12px;
+  }
+  body{
+    background-size:240%;
+    background-repeat: no-repeat;
+    background-position-y: center;
   }
 }
 @media screen and (min-width:360px) and (max-width:530px){
@@ -167,6 +256,11 @@ div{
   #title{
     font-size:20px;
   }
+  body{
+    background-size:300%;
+    background-repeat: no-repeat;
+    background-position-y: center;
+  }
 }
 @media only screen and (max-width:360px){
   .navOption{
@@ -176,4 +270,136 @@ div{
   #title{
     font-size:14px;
   }
+  body{
+    background-size:350%;
+    background-repeat: no-repeat;
+    background-position-y: center;
+  }
 }
+
+
+
+
+@keyframes myStart {
+  0%{
+    background-size: 70%;
+    background-color: rgb(179, 255, 2);
+    border-radius: 70%;
+  }
+  
+}
+
+@keyframes myFinish {
+  0%{background-color:rgb(255, 38, 0)}
+  50%{background-color:rgb(255, 103, 179)}
+  100%{background-color:rgb(255, 38, 0)}
+}
+
+@keyframes myObstacle {
+0%{
+  outline-color: rgb(68, 0, 45);
+  border-radius: 50%;
+  background-color: transparent;
+}
+50%{
+  outline-color: rgb(104, 103, 103);
+}
+100%{
+  outline-color: rgb(68, 0, 45);
+}
+
+
+}
+
+@keyframes myVisited {
+ 
+  0% {  
+        background-image: url("./icons/obstacle.png");
+        outline-color: rgb(206, 142, 234);
+        background-color: rgb(239, 252, 0);
+        border-radius: 80%;
+        outline-style:dashed;
+        background-size:10%;
+        
+      }
+  30%{
+    outline-color: rgb(0, 221, 255);
+    background-color: rgb(224, 72, 17);
+  }
+  60%{
+      background-color: rgb(245, 12, 51);
+  }
+  90%{
+    background-size:90%;
+  }
+ 
+}
+
+@keyframes myPath {
+  0%{
+    border-radius:100%;
+    background-size: 60%;
+    background-color: rgb(247, 6, 150);
+  }
+  50%{
+    border-radius:70%;
+    background-size: 80%;
+  }
+  
+}
+
+
+
+#popup{
+  cursor:url("./icons/ok.png"),auto;
+  position:fixed;
+  height:auto;
+  width:40%;
+  margin-top:10%;
+  margin-left:25%;
+  visibility: hidden;
+  border:3px solid white;
+  border-radius:6px;
+  opacity: 0.9;
+  background-image: linear-gradient(to bottom , rgb(224, 248, 242), rgb(103, 229, 208) 50%);
+  background-size: 100%;
+  background-position: 50% 100%;
+  padding-bottom: 10px;
+}
+#popDes{
+  cursor:default;
+  text-decoration: underline;
+  height:80%;
+}
+
+#project_Description{
+  background-image: linear-gradient(to top , rgb(224, 248, 242), rgb(57, 164, 214) 90%);
+ opacity: 0.9;
+ border: 3px solid white;
+ border-radius: 5px;
+ cursor:url("./icons/ok.png"),auto;
+  position:fixed;
+  height:auto;
+  width:40%;
+  margin-top:5%;
+  margin-left:28%;
+  visibility: hidden;
+  padding-bottom: 10px;
+}
+
+
+#noAlgoSlt{
+  background-image: linear-gradient(to bottom , rgb(224, 248, 242), rgb(214, 57, 114) 70%);
+  opacity: 0.9;
+  border: 3px solid white;
+  border-radius: 5px;
+  cursor: url("./icons/ok.png"),auto;
+   position:fixed;
+   height:auto;
+   width:40%;
+   margin-top:5%;
+   margin-left:28%;
+   visibility: hidden;
+   padding-bottom: 10px;
+ }
+
